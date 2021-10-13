@@ -6,11 +6,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: UniswapV2Factory
-    network: rinkeby
+    network: {{ network }}
     source:
-      address: '0xb10db5fc1c2ca4d72e6ebe1a9494b61fa3b71385'
+      address: '{{ factory.address }}'
       abi: UniswapV2Factory
-      startBlock: 9292320
+      startBlock: {{ factory.startBlock }}
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3

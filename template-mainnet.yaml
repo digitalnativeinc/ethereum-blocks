@@ -5,21 +5,20 @@ schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
-    name: UniswapV2Factory
-    network: rinkeby
+    name: ConverterRegistryContract
+    network: mainnet
     source:
-      address: '0xb10db5fc1c2ca4d72e6ebe1a9494b61fa3b71385'
-      abi: UniswapV2Factory
-      startBlock: 9292320
+      address: "0x0ddff327ddf7fe838e3e63d02001ef23ad1ede8e"
+      abi: ConverterRegistryContract
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
       language: wasm/assemblyscript
       entities:
-        - UniswapV2Pair
+        - ConverterAddition
       abis:
-        - name: UniswapV2Factory
-          file: ./abis/UniswapV2Factory.json
+        - name: ConverterRegistryContract
+          file: ./abis/ConverterRegistryContract.json
       blockHandlers:
         - handler: handleBlock
       file: ./src/mappings/blocks.ts

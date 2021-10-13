@@ -1,5 +1,5 @@
 import {
-    EthereumBlock
+    EthereumBlock,
 } from "@graphprotocol/graph-ts"
 
 import {
